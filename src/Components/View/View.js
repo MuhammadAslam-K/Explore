@@ -14,8 +14,8 @@ function View() {
         <div className="productDetails">
           <p>place name</p>
           <span>&#x20B9; price </span>
-          <p>Two Wheeler</p>
-          <span>Tue May 04 2021</span>
+          <p>facilyts provided</p>
+          <span>places to visit</span>
         </div>
         <div className="contactDetails">
           <p>Seller details</p>

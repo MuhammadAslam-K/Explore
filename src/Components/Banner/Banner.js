@@ -1,10 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import image from '../Images/Banner.jpg'
 import './Banner.css'
 import {useHistory} from 'react-router-dom'
+import {FirebaseContext,AuthContext} from '../../store/Context'
 
 function Banner() {
 const history = useHistory()
+const {firebase} = useContext(FirebaseContext)
+const {user} = useContext(AuthContext)
   return (
     <div className='banner-img'
     style={{backgroundImage:`url(${image})`,
@@ -19,8 +22,12 @@ const history = useHistory()
         onClick={()=>{
             history.push('/login')
         }}
-        >login</span>
-        <span className='logout-btn'>logout</span>
+        >{user ? `welcome ${user.displayName}`:'login'}</span>
+      { user && <span className='logout-btn'
+      onClick={()=>{
+        firebase.auth().signOut();
+        history.push('/')
+      }}>logout</span>}
         </div>
         </div>
       </div>

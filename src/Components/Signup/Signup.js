@@ -19,10 +19,12 @@ function Signup() {
       result.user.updateProfile({ displayName: username }).then(() => {
         firebase.firestore().collection('users').add({
           id: result.user.uid,
-          username: username,
+          username:username,
           phone: phone
         }).then(() => {
           history.push('/login')
+        }).catch((error)=>{
+          alert(error.messag)
         })
       })
     })

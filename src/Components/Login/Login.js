@@ -1,12 +1,23 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import './Login.css'
 import image from '../Images/login.jpg'
 import {useHistory} from 'react-router-dom'
+import {FirebaseContext} from '../../store/Context'
 
 function Login() {
   const history = useHistory()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
+  const {firebase} =useContext(FirebaseContext)
+
+  const handlelogin=(e)=>{
+    e.preventDefault()
+    firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
+      history.push('/home')
+    }).catch((error)=>{
+      alert(error.message)
+    })
+  }
   return (
     <div className='login-img'
     style={{backgroundImage:`url(${image})`}}>
@@ -14,7 +25,7 @@ function Login() {
         <div>
         <h1>“The journey of<br />a thousand miles<br />begins  with a single<br />step.”</h1>
         </div>
-      <form>
+      <form onSubmit={handlelogin}>
         <label>Email id</label><br />
         <input 
         type='email'
@@ -32,17 +43,13 @@ function Login() {
         />
         <br/>
         <div className='loginbtn-parentdiv'>
-        <button className='login'
-        onClick={()=>{
-          history.push('/home')
-        }}
-        >login</button>
+        <button className='login'>login</button>
         </div>
-        <p className='create'>create an account <a className='login-signup'
+        <h3 className='create'>create an account <a className='login-signup'
         onClick={()=>{
           history.push('/signup')
-        }}
-        >SignUp</a> ?</p>
+        }} >SignUp ?</a> </h3>
+       
       </form>
     </div>
     </div>
