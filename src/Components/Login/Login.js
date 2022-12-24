@@ -42,7 +42,7 @@ function Login() {
         onClick={()=>{
           history.push('/signup')
         }}
-        >SignUp ?</a></p>
+        >SignUp</a> ?</p>
       </form>
     </div>
     </div>
