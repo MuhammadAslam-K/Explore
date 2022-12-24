@@ -1,0 +1,41 @@
+.signup-img{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 46.5rem;
+    background-size: cover;
+}
+.signup-box{
+    border: 1px solid black;
+    background-color:rgba(244, 242, 240, 0.712);
+    width: max-content;
+    padding: 8px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    height: 420px;
+}
+.input{
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    outline-color: transparent;
+    padding: 8px;
+    width: 290px;
+    height: 30px;
+}
+.signup-btn{
+    width: 30%;
+    border-radius: 0.8rem;
+    height: 35px;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: rgba(23, 150, 185, 0.782);
+    font-weight: bolder;
+    border: none;
+}
+.signup-btn:hover{
+    background-color: rgba(23, 185, 139, 0.782);
+}
