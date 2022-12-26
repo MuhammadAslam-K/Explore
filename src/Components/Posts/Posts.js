@@ -25,25 +25,26 @@ const history = useHistory()
 
     return (
         <div className="postParentDiv">
+            <h1 className='text'>Top Places</h1>
             <div className="moreView">
                 <div className="cards">
                     {products.map(product => {
 
                         return <div className="card"
-                        onClick={()=>{
-                            setPostDetails(product)
-                            history.push('/view')
-                        }}>
+                        >
                             <div className="image">
                                 <img src={product.url} alt="no img" />
                             </div>
                             <div className="content">
                                 <p className="name">{product.placename}</p>
                                 <span className="price">&#x20B9;{product.price}</span>
-                                <p className="offer">{product.offer}</p>
+                                <p className="offer">{product.offer}%</p>
                             </div>
                             <div className="date">
-                                <span></span>
+                                <span onClick={()=>{
+                            setPostDetails(product)
+                            history.push('/view')
+                        }}>Details</span>
                             </div>
                         </div>
                     })

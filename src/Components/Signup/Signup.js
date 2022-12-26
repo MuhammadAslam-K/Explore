@@ -70,6 +70,10 @@ function Signup() {
           />
           <br />
           <button className='signup-btn'>signUp</button>
+          <p>already have an account <a className='signup-login'
+          onClick={()=>{
+            history.push('/login')
+          }}>login?</a></p>
         </form>
       </div>
     </div>

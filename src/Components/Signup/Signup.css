@@ -39,3 +39,7 @@
 .signup-btn:hover{
     background-color: rgba(23, 185, 139, 0.782);
 }
+.signup-login{
+    color: rgb(5, 1, 253);
+    cursor: pointer;
+}

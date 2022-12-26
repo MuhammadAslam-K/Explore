@@ -19,6 +19,7 @@ useEffect(()=>{
   return (
     <div className="viewParentDiv">
       <div className="imageShowDiv">
+      <p className='location'>{postDetails.placename}</p>
         <img
           src={postDetails.url}
           alt=""
@@ -26,15 +27,19 @@ useEffect(()=>{
       </div>
       <div className="rightSection">
         <div className="productDetails">
-          <p>{postDetails.placename}</p>
-          <span>&#x20B9; {postDetails.price} </span>
-          <p>{postDetails.facilityprovided}</p>
-          <span>{postDetails.placetovisit}</span>
+          
+          <span>Price:&#x20B9; {postDetails.price} </span>
+          <p>Offer:{postDetails.offer}%</p>
+          <span>Places to visit:{postDetails.placetovisit}</span>
+        </div>
+        <div className='aboutsection'>
+        <p><h1>About:</h1>{postDetails.discription}</p>
         </div>
 
   { userDetails && <div className="contactDetails">
-          <p>{userDetails.username}</p>
-          <p>{userDetails.phone}</p>
+    <h1>Agent Details</h1>
+          <p>Name:{userDetails.username}</p>
+          <p>Phone No:{userDetails.phone}</p>
           
         </div> }
       </div>

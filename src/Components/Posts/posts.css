@@ -1,27 +1,36 @@
+.text{
+    color: rgb(21, 22, 22);
+    padding-left: 50%;
+    margin-top: 1.5px;
+    background-color:rgba(24, 182, 235, 0.43);
+}
 .moreView {
     margin: 16px 16px 24px;
     padding: 16px 16px 32px;
-    background-color: #ebeeef;
+    background-color: #a8acae5b;
     border-radius: 4px;
 }
 .recommendations .cards {
     display: flex;
+   
 }
   
 .moreView .cards {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
+    background-color: rgba(128, 128, 132, 0.385);
 }
   
 .card {
     margin-right: 15px;
     padding: 13px;
     max-width: 222px;
-    width: 222px;
-    height: 270px;
+    width: 200px;
+    height: 220px;
     display: inline-block;
     cursor: pointer;
+    background-color: rgba(102, 98, 98, 0.17);
 }
   
 .card .favorite {
@@ -56,10 +65,13 @@
 }
 .card .date {
     display: flex;
-    justify-content: flex-end;
-    font-size: small;
+    padding-left: 40%;
+    padding-top: 20%;
+    font-size: bolder;
+    font-weight: bolder;
 }
   
 .recommendations {
     margin: 16px 16px 24px;
+    
 }
